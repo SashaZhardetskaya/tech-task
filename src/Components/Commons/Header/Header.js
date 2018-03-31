@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 import './Header.scss';
 // import grid from '../../styles/grid.css';
@@ -15,45 +15,42 @@ const Header = () => {
 
     return (
         <div
-            className='wrapper'
+            className='header__wrapper'
         >
             <div
-                // className={grid.container}
+                className='header__container'
             >
-                <div
-                    className='justify'
+                <Link
+                    className='user'
+                    to={'/contacts'}
                 >
-                    <Link
-                        className='user'
-                        to={'/contacts'}
-                    >
-                        <div
-                            className='logo'
+                    <div className='logo'>
+                        SZ
+                    </div>
+                    <div className='name'>
+                        Sasha Zhardetskaya
+                    </div>
+                </Link>
+                <ul
+                    className='header__nav'
+                >
+                    {links.map(link => {
+                        return <li
+                            key={link.path}
+                            className='header__nav-item'
                         >
-                            SZ
-                        </div>
-                        <div
-                            className='name'
-                        >Sasha Zhardetskaya</div>
-                    </Link>
-                    <ul
-                        className='navList'
-                    >
-                        {links.map(link => {
-                            return <li key={link.path}>
-                                {
-                                    link.path.startsWith('/') ?
-                                        <Link
-                                            activeClassName='activeLink'
-                                            to={link.path}
-                                        >{link.text}</Link> :
-                                        <a href={link.path}>{link.text}</a>
-                                }
+                            {
+                                link.path.startsWith('/') ?
+                                    <NavLink
+                                        activeClassName='activeLink'
+                                        to={link.path}
+                                    >{link.text}</NavLink> :
+                                    <a href={link.path}>{link.text}</a>
+                            }
 
-                            </li>;
-                        })}
-                    </ul>
-                </div>
+                        </li>;
+                    })}
+                </ul>
             </div>
         </div>
     );

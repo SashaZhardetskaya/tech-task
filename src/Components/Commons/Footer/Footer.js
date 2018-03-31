@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 // import grid from '../../styles/grid.css';
 import './Footer.scss';
@@ -17,27 +17,28 @@ const Footer = () => {
 
     return (
         <div
-            className='wrapper'
+            className='footer__wrapper'
         >
             <div
-                className='container'
+                className='footer__container'
             >
-                <div
-                    className='justify'
-                >
-                    <div
-                        className='copyright'
-                    >© 2017 Something.</div>
-                    <ul
-                        className='navList'
-                    >
-                        {links.map((link, index) => {
-                            return <li key={index}>
-                                <Link to={link.path}>{link.text}</Link>
-                            </li>;
-                        })}
-                    </ul>
+                <div className='copyright'>
+                    © 2017 Something.
                 </div>
+                <ul className='footer__nav'>
+                    {links.map((link, index) => {
+                        return (
+                            <li
+                                className='footer__nav-item'
+                                key={index}
+                            >
+                                <NavLink to={link.path}>
+                                    {link.text}
+                                </NavLink>
+                            </li>
+                        )
+                    })}
+                </ul>
             </div>
         </div>
     );

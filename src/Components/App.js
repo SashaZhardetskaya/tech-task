@@ -11,7 +11,7 @@ import Calendar from './Calendar/Calendar';
 import Contacts from './Contacts/Contacts';
 import NotFound from './Commons/NotFound/NotFound'
 
-import '../App.css';
+import '../App.scss';
 
 
 

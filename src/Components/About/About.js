@@ -84,7 +84,7 @@ class About extends Component {
                     {
                         listContent.map((item, index) => {
                             return (
-                                <li key={'sdfgh__'+index}>
+                                <li key={item.text}>
                                     <div
                                         onClick={() => this.handleActiveOpenAcc(index)}
                                     >
@@ -98,7 +98,6 @@ class About extends Component {
                                     </div>
                                     <SlideDown className='my-dropdown-slidedown'>
                                         {this.state.currentOpenAccIndex.indexOf(index) > -1 && this.renderListContent(index)}
-                                        {/*{console.log('this.state.currentOpenAccIndex.indexOf(index)', this.state.currentOpenAccIndex)}*/}
                                     </SlideDown>
                                 </li>
                             )

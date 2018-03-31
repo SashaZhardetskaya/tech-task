@@ -11,30 +11,34 @@ const Contacts = () => {
 
     const contactsData = [
         {
-            path: '/about',
+            path: 'https://twitter.com/?lang=ru',
             text: 'Twitter',
             image: ico1,
             color: '#eee'
         },
         {
-            path: '/calendar',
+            path: 'mailto:sasha310209@gmail.com',
+            text: 'Email',
             image: ico2,
-            text: 'Email'
+            color: '#eee'
         },
         {
-            path: 'https://drive.google.com/file/d/1dmMWGPdbzGA08w8JphOjx00gnkInwyH0/view?usp=sharing',
+            path: 'https://www.facebook.com/SashaZhar',
             text: 'Facebook',
             image: ico3,
+            color: '#eee'
         },
         {
             path: 'https://drive.google.com/file/d/1dmMWGPdbzGA08w8JphOjx00gnkInwyH0/view?usp=sharing',
             text: 'Linkedin',
             image: ico4,
+            color: '#eee'
         },
         {
             path: 'https://github.com/SashaZhardetskaya',
             text: 'Github',
             image: ico5,
+            color: '#eee'
         }
     ];
 
