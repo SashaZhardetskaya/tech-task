@@ -18,6 +18,7 @@ class Calendar extends Component {
     handleSelect = (range) => {
         console.log(range);
         console.log(range.startDate._d);
+        console.log(moment());
 
         let diffMs = moment(range.endDate).diff(moment(range.startDate));
         let diffDays = Math.floor(moment.duration(diffMs).asDays())+1;
@@ -33,7 +34,6 @@ class Calendar extends Component {
 
     //Renders
 
-
     render() {
         const {
             rangePicker
@@ -46,12 +46,12 @@ class Calendar extends Component {
                     <input
                         type='text'
                         readOnly
-                        value={ rangePicker['startDate'] && rangePicker['startDate'].format(format).toString() }
+                        value={ rangePicker['startDate'] ? rangePicker['startDate'].format(format).toString() : moment()}
                     />
                     <input
                         type='text'
                         readOnly
-                        value={ rangePicker['endDate'] && rangePicker['endDate'].format(format).toString() }
+                        value={ rangePicker['endDate'] ? rangePicker['endDate'].format(format).toString() : moment()}
                     />
                     <input
                         type='text'
