@@ -34,38 +34,78 @@ const listContent = [
 
 class About extends Component {
 
+    state = {
+        currentOpenAccIndex: []
+    };
+
+    //Actions
+    handleActiveOpenAcc = (index) => {
+        const currentIndex = this.state.currentOpenAccIndex;
+        this.setState({
+            currentOpenAccIndex:
+                currentIndex.indexOf(index) > -1
+                    ? currentIndex.filter(i => i !== index)
+                    : [...currentIndex, index]
+        })
+    };
+
     //Renders
+
+    renderListContent = (index) => {
+        switch (index) {
+            case 0:
+                return (
+                    <div>000000--------------</div>
+                );
+            case 1:
+                return (
+                    <div>111111--------------</div>
+                );
+            case 2:
+                return (
+                    <div>22222--------------</div>
+                );
+            case 3:
+                return (
+                    <div>3333333---------------</div>
+                );
+            default:
+                return null;
+        }
+    };
 
     render() {
         return (
             <div>
-
-
-
-                <ul>
+                <h2>Ameen Merchant App</h2>
+                <ul
+                    // className={}
+                >
                     {
                         listContent.map((item, index) => {
                             return (
-                                <li>
+                                <li key={'sdfgh__'+index}>
                                     <div
-                                        style={{backgroundColor: item.color}}
+                                        onClick={() => this.handleActiveOpenAcc(index)}
                                     >
-                                        <img src={item.image} alt={item.text}/>
+                                        <div
+                                            style={{backgroundColor: item.color}}
+                                        >
+                                            <img src={item.image} alt={item.text}/>
+                                        </div>
+                                        <p>{item.text}</p>
+                                        <i>sdcsd</i>
                                     </div>
-                                    <p>{item.text}</p>
-                                    <i>sdcsd</i>
+                                    <SlideDown className='my-dropdown-slidedown'>
+                                        {this.state.currentOpenAccIndex.indexOf(index) > -1 && this.renderListContent(index)}
+                                        {/*{console.log('this.state.currentOpenAccIndex.indexOf(index)', this.state.currentOpenAccIndex)}*/}
+                                    </SlideDown>
                                 </li>
                             )
                         })
                     }
                 </ul>
 
-                <SlideDown className='my-dropdown-slidedown'>
-                    {
-                        // (item.expanded && item.items) &&
-                        // this.renderCategorySubItems(`${catId}_${index}`, item.items)
-                    }
-                </SlideDown>
             </div>
         );
     }

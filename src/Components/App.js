@@ -7,6 +7,7 @@ import logo from '../logo.svg';
 import Footer from './Commons/Footer/Footer';
 import Header from './Commons/Header/Header';
 import About from './About/About';
+import Calendar from './Calendar/Calendar';
 import NotFound from './Commons/NotFound/NotFound'
 
 import '../App.css';
@@ -39,8 +40,8 @@ class App extends Component {
                         component={About}
                     />
                     <Route
-                        path='/dashboard-admin'
-                        // component={DashboardAdminContainer}
+                        path='/calendar'
+                        component={Calendar}
                     />
                     <Route
                         path='/question'
