@@ -61,9 +61,16 @@
         transition: .3s;
         color: #fff;
         text-decoration: none;
-        &:hover, &.activeLink {
+        &:hover {
             color: #FAFBFC;
             opacity: 0.8;
+        }
+        &.activeLink {
+            color: #FAFBFC;
+            opacity: 0.6;
+            &:hover {
+                opacity: 0.6;
+            }
         }
     }
 }

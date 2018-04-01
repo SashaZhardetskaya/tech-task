@@ -9,5 +9,21 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background: #fafbfc;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  padding: 58px 12px 30px 12px;
+}
+
+.main-title {
+  font-size: 32px;
+  letter-spacing: -0.888889px;
+  color: #222634;
+  margin-bottom: 28px;
+  padding: 0 15px;
+  font-weight: 400;
 }
 

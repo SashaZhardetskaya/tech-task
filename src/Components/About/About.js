@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-// import PropTypes from "prop-types";
 import {SlideDown} from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css';
 // import userImage from "../../assets/128x128.jpg";
@@ -8,6 +7,7 @@ import ico1 from "../../Images/readme/ico1.svg";
 import ico2 from "../../Images/readme/ico2.svg";
 import ico3 from "../../Images/readme/ico3.svg";
 import ico4 from "../../Images/readme/ico4.svg";
+import './About.scss'
 
 const listContent = [
     {
@@ -76,19 +76,24 @@ class About extends Component {
 
     render() {
         return (
-            <div>
-                <h2>Ameen Merchant App</h2>
-                <ul
-                    // className={}
-                >
+            <div className='content-wrapper'>
+                <h2 className='main-title'>
+                    Ameen Merchant App
+                </h2>
+                <ul className='about__list'>
                     {
                         listContent.map((item, index) => {
                             return (
-                                <li key={item.text}>
+                                <li
+                                    key={item.text}
+                                    className='about__card'
+                                >
                                     <div
+                                        className='about__collapsed-card'
                                         onClick={() => this.handleActiveOpenAcc(index)}
                                     >
                                         <div
+                                            className='about__icon'
                                             style={{backgroundColor: item.color}}
                                         >
                                             <img src={item.image} alt={item.text}/>
@@ -108,11 +113,6 @@ class About extends Component {
             </div>
         );
     }
-
 }
-
-// Sidebar.propTypes = {
-    // handleClickMenuItem: PropTypes.func.isRequired
-// };
 
 export default About;
