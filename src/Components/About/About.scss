@@ -1,6 +1,16 @@
 
 .about__list {
     padding: 0;
+    code {
+        font: 16px "CourierNewPSMT", sans-serif;
+        line-height: 22px;
+        background: #F9FBFC;
+        padding: 0px 6px;
+        display: inline-block;
+        border-radius: 4px;
+        vertical-align: top;
+        margin: 0 4px
+    }
 }
 
 .about__card {
@@ -40,14 +50,17 @@
 
 .about__open-card {
     font-weight: 300;
-    padding: 0 0 0 52px;
+    padding: 8px 0 0 52px;
+    //margin-top: 8px;
     strong {
         font-weight: 400;
+        padding-right: 8px;
     }
     ul {
         padding: 0;
     }
     li {
+        line-height: 28px;
         list-style-type: none;
     }
 }

@@ -60,9 +60,7 @@ class About extends Component {
                         <ul>
                             <li>
                                 <strong>Step 1:</strong>
-                                git clone
-                                <a href="https://github.com/SashaZhardetskaya/tech-task">this</a>
-                                repo
+                                git clone <a href="https://github.com/SashaZhardetskaya/tech-task">this</a> repo
                             </li>
                             <li>
                                 <strong>Step 2:</strong>
@@ -70,7 +68,8 @@ class About extends Component {
                             </li>
                             <li>
                                 <strong>Step 3:</strong>
-                                Install the Application with yarn | npm i
+                                Install the Application with
+                                <code> yarn | npm i</code>
                             </li>
                         </ul>
                     </div>
@@ -78,7 +77,8 @@ class About extends Component {
             case 1:
                 return (
                     <div className='about__open-card'>
-                        Run the Application with yarn start | npm start
+                        Run the Application with
+                        <code> yarn start | npm start</code>
                     </div>
                 );
             case 2:
