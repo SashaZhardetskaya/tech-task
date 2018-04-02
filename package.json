@@ -1,7 +1,7 @@
 {
   "name": "tech-task",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://sashazhardetskaya.github.io/tech-task/",
   "dependencies": {
     "autoprefixer": "7.1.6",
