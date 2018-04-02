@@ -20,6 +20,19 @@ class App extends Component {
 
                     <Route
                         exact
+                        path='/tech-task'
+                        render={
+                            () => (
+                                <Redirect
+                                    to='/about'
+                                    component={About}
+                                />
+                            )
+                        }
+                    />
+
+                    <Route
+                        exact
                         path='/'
                         render={
                             () => (
