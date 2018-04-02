@@ -1,0 +1,81 @@
+
+.calendar-input__wrapper {
+  display: flex;
+  margin-bottom: 29px;
+}
+.calendar-input {
+  display: flex;
+  flex-direction: column;
+  background: #adadad1a;
+  border-radius: 4px 0 0 4px;
+  padding: 12px 10px 10px 15px;
+  transition: .3s all ease-in-out;
+  input {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #222634
+  }
+  .sign {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #222634;
+    opacity: 0.6;
+    margin-bottom: 6px;
+  }
+  &:hover {
+    box-shadow: 0px 2px 10px rgba(19, 19, 19, 0.09);
+    background: #ffffff;
+  }
+  &__date {
+    width: 154px;
+    position: relative;
+    &:before {
+      border: 6px solid transparent;
+      position: absolute;
+      content: '';
+      width: 0px;
+      height: 0px;
+      top: 50%;
+      margin-top: -6px;
+      border: 6px solid transparent;
+      opacity: 0;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+    }
+    &:nth-child(1) {
+      &:hover:before {
+        opacity: 1;
+      }
+      &:before {
+        right: 0px;
+        border-right-color: rgba(173, 173, 173, 0.25);
+      }
+    }
+    &:nth-child(2) {
+      &:hover:before {
+        opacity: 1;
+      }
+      &:before {
+        left: 0;
+        border-left-color: rgba(173, 173, 173, 0.25);
+      }
+    }
+  }
+  &__day {
+    width: 56px;
+    margin-left: 13px;
+  }
+}
+
+
+//override calendar styles from plugin
+
+.rdr-Calendar {
+  transition: .3s all ease-in-out;
+}
+.rdr-Calendar:hover {
+  box-shadow: 0px 2px 10px rgba(19, 19, 19, 0.11);
+}
