@@ -50,30 +50,33 @@ const Contacts = () => {
             <h2 className='main-title'>
                 Contact us
             </h2>
-            <ul className='about__list'>
+            <ul className='contacts__list'>
                 {contactsData.map(link => {
                     return (
                         <li
                             key={link.path}
-                            className={`about__card`}
+                            className='contacts__card'
                         >
-                            <a href={link.path}>{link.text}</a>
-                            <div
-                                className='about__collapsed-card'
-                                // onClick={() => this.handleActiveOpenAcc(index)}
+                            <a
+                                href={link.path}
+                                className='contacts__link'
                             >
                                 <div
-                                    className='about__icon'
-                                    style={{backgroundColor: link.color}}
+                                    className='about__collapsed-card'
+                                    // onClick={() => this.handleActiveOpenAcc(index)}
                                 >
-                                    <img src={link.image} alt={link.text}/>
+                                    <div
+                                        className='about__icon'
+                                        style={{backgroundColor: link.color}}
+                                    >
+                                        <img src={link.image} alt={link.text}/>
+                                    </div>
+                                    {link.text}
+                                    <div className="contacts__button">
+                                        <span>Visit page</span>
+                                    </div>
                                 </div>
-                                <img
-                                    // className={`arrow-icon ${this.state.currentOpenAccIndex.indexOf(index) > -1 && 'open'}`}
-                                    src={arrowDown}
-                                    alt="arrow"
-                                />
-                            </div>
+                            </a>
                         </li>
                     )
                 })}

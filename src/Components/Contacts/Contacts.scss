@@ -1,19 +1,9 @@
 
-.about__list {
+.contacts__list {
   padding: 0;
-  code {
-    font: 16px "CourierNewPSMT", sans-serif;
-    line-height: 22px;
-    background: #F9FBFC;
-    padding: 0px 6px;
-    display: inline-block;
-    border-radius: 4px;
-    vertical-align: top;
-    margin: 0 4px
-  }
 }
 
-.about__card {
+.contacts__card {
   list-style-type: none;
   background: #fff;
   margin-bottom: 8px;
@@ -48,19 +38,34 @@
   }
 }
 
-.about__open-card {
-  font-weight: 300;
-  padding: 8px 0 0 52px;
-  //margin-top: 8px;
-  strong {
-    font-weight: 400;
-    padding-right: 8px;
-  }
-  ul {
-    padding: 0;
-  }
-  li {
-    line-height: 28px;
-    list-style-type: none;
+.contacts__link {
+  text-decoration: none;
+}
+
+.contacts__button {
+  margin-left: auto;
+  padding: 0 12px;
+  line-height: 36px;
+  background: #1367D7;
+  border-radius: 4px;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 115px;
+  span {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 8px;
+      background: url(../../Images/commons/arrow_to_right.svg) no-repeat center center;
+      top: 50%;
+      right: -10px;
+      margin-top: -4px;
+    }
   }
 }
