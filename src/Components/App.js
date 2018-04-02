@@ -20,19 +20,6 @@ class App extends Component {
 
                     <Route
                         exact
-                        path='/tech-task'
-                        render={
-                            () => (
-                                <Redirect
-                                    to='/about'
-                                    component={About}
-                                />
-                            )
-                        }
-                    />
-
-                    <Route
-                        exact
                         path='/'
                         render={
                             () => (
@@ -42,6 +29,10 @@ class App extends Component {
                                 />
                             )
                         }
+                    />
+                    <Route
+                        path='/tech-task'
+                        component={About}
                     />
                     <Route
                         path='/about'
