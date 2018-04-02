@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import {Link, Redirect, Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch} from 'react-router-dom';
 
-
-import logo from '../logo.svg';
-// import './Try.scss';
 import Footer from './Commons/Footer/Footer';
 import Header from './Commons/Header/Header';
 import About from './About/About';
@@ -12,9 +9,6 @@ import Contacts from './Contacts/Contacts';
 import NotFound from './Commons/NotFound/NotFound'
 
 import '../App.scss';
-
-
-
 
 class App extends Component {
     render() {
@@ -26,11 +20,11 @@ class App extends Component {
 
                     <Route
                         exact
-                        path="/"
+                        path='/'
                         render={
                             () => (
                                 <Redirect
-                                    to="/about"
+                                    to='/about'
                                     component={About}
                                 />
                             )
@@ -49,7 +43,7 @@ class App extends Component {
                         component={Contacts}
                     />
 
-                    <Route path = "*" component = {NotFound}/>
+                    <Route path = '*' component = {NotFound}/>
                 </Switch>
 
                 <Footer/>

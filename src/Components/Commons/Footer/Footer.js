@@ -1,7 +1,5 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
-
-// import grid from '../../styles/grid.css';
+import {NavLink} from 'react-router-dom';
 import './Footer.scss';
 
 const Footer = () => {
@@ -16,12 +14,8 @@ const Footer = () => {
     ];
 
     return (
-        <div
-            className='footer__wrapper'
-        >
-            <div
-                className='footer__container'
-            >
+        <div className='footer__wrapper'>
+            <div className='footer__container'>
                 <div className='copyright'>
                     © 2017 Something.
                 </div>

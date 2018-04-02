@@ -1,9 +1,9 @@
 import React from 'react';
-import ico1 from "../../Images/contacts/ico1.svg";
-import ico2 from "../../Images/contacts/ico2.svg";
-import ico3 from "../../Images/contacts/ico3.svg";
-import ico4 from "../../Images/contacts/ico4.svg";
-import ico5 from "../../Images/contacts/ico5.svg";
+import ico1 from '../../Images/contacts/ico1.svg';
+import ico2 from '../../Images/contacts/ico2.svg';
+import ico3 from '../../Images/contacts/ico3.svg';
+import ico4 from '../../Images/contacts/ico4.svg';
+import ico5 from '../../Images/contacts/ico5.svg';
 import './Contacts.scss'
 
 const Contacts = () => {
@@ -65,7 +65,7 @@ const Contacts = () => {
                                         <img src={link.image} alt={link.text}/>
                                     </div>
                                     <p>{link.text}</p>
-                                    <div className="contacts__button">
+                                    <div className='contacts__button'>
                                         <span>Visit page</span>
                                     </div>
                                 </div>

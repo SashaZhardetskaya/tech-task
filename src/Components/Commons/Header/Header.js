@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link, NavLink} from "react-router-dom";
-
 import './Header.scss';
-// import grid from '../../styles/grid.css';
 
 const Header = () => {
 
@@ -22,7 +20,7 @@ const Header = () => {
             >
                 <Link
                     className='user'
-                    to={'/contacts'}
+                    to='/contacts'
                 >
                     <div className='logo'>
                         SZ

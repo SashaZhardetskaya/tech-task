@@ -2,31 +2,12 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-        <div>
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
-            404
+        <div
+            style={{
+                fontSize: '60px',
+                marginTop: '60px'
+            }}
+        >
             404
         </div>
     );

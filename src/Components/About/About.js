@@ -1,11 +1,11 @@
-import React, {Component} from "react";
+import React, {Component} from 'react';
 import {SlideDown} from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css';
-import ico1 from "../../Images/readme/ico1.svg";
-import ico2 from "../../Images/readme/ico2.svg";
-import ico3 from "../../Images/readme/ico3.svg";
-import ico4 from "../../Images/readme/ico4.svg";
-import arrowDown from "../../Images/commons/arrow_icon.svg";
+import ico1 from '../../Images/readme/ico1.svg';
+import ico2 from '../../Images/readme/ico2.svg';
+import ico3 from '../../Images/readme/ico3.svg';
+import ico4 from '../../Images/readme/ico4.svg';
+import arrowDown from '../../Images/commons/arrow_icon.svg';
 import './About.scss'
 
 const listContent = [
@@ -57,7 +57,7 @@ class About extends Component {
                         <ul>
                             <li>
                                 <strong>Step 1:</strong>
-                                git clone <a href="https://github.com/SashaZhardetskaya/tech-task">this</a> repo
+                                git clone <a href='https://github.com/SashaZhardetskaya/tech-task'>this</a> repo
                             </li>
                             <li>
                                 <strong>Step 2:</strong>
@@ -84,32 +84,32 @@ class About extends Component {
                         <ul>
                             <li>
                                 <strong>1:</strong>
-                                <a href="https://www.npmjs.com/package/create-react-app">Create-React-App</a>
+                                <a href='https://www.npmjs.com/package/create-react-app'>Create-React-App</a>
                             </li>
                             <li>
                                 <strong>2:</strong>
-                                <a href="https://reactjs.org/">React 16</a>
+                                <a href='https://reactjs.org/'>React 16</a>
                             </li>
                             <li>
                                 <strong>3:</strong>
-                                <a href="https://www.npmjs.com/package/react-router-dom">react-router 4</a>
+                                <a href='https://www.npmjs.com/package/react-router-dom'>react-router 4</a>
                             </li>
                             <li>
                                 <strong>4:</strong>
-                                <a href="http://adphorus.github.io/react-date-range/">react-date-range</a>
+                                <a href='http://adphorus.github.io/react-date-range/'>react-date-range</a>
                             </li>
                             <li>
                                 <strong>5:</strong>
                                 Plugin for animations
-                                <a href="https://www.npmjs.com/package/react-slidedown"> react-slidedown</a>
+                                <a href='https://www.npmjs.com/package/react-slidedown'> react-slidedown</a>
                             </li>
                             <li>
                                 <strong>6:</strong>
-                                <a href="https://webpack.js.org/">Webpack</a>
+                                <a href='https://webpack.js.org/'>Webpack</a>
                             </li>
                             <li>
                                 <strong>7:</strong>
-                                <a href="https://sass-scss.ru/">SASS (SCSS)</a>
+                                <a href='https://sass-scss.ru/'>SASS (SCSS)</a>
                             </li>
                         </ul>
                     </div>
@@ -117,7 +117,7 @@ class About extends Component {
             case 3:
                 return (
                     <div className='about__open-card'>
-                        This project available on gh pages via <a href="">link</a>
+                        This project available on gh pages via <a href='https://sashazhardetskaya.github.io/tech-task/'>link</a>
                     </div>
                 );
             default:
@@ -153,7 +153,7 @@ class About extends Component {
                                         <img
                                             className={`arrow-icon ${this.state.currentOpenAccIndex.indexOf(index) > -1 && 'open'}`}
                                             src={arrowDown}
-                                            alt="arrow"
+                                            alt='arrow'
                                         />
                                     </div>
                                     <SlideDown className='my-dropdown-slidedown'>
