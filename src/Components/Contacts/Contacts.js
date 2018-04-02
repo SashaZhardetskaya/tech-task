@@ -1,13 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-
 import ico1 from "../../Images/contacts/ico1.svg";
 import ico2 from "../../Images/contacts/ico2.svg";
 import ico3 from "../../Images/contacts/ico3.svg";
 import ico4 from "../../Images/contacts/ico4.svg";
 import ico5 from "../../Images/contacts/ico5.svg";
-
-import arrowDown from "../../Images/commons/arrow_icon.svg";
 import './Contacts.scss'
 
 const Contacts = () => {
@@ -61,17 +57,14 @@ const Contacts = () => {
                                 href={link.path}
                                 className='contacts__link'
                             >
-                                <div
-                                    className='about__collapsed-card'
-                                    // onClick={() => this.handleActiveOpenAcc(index)}
-                                >
+                                <div className='contacts__card-content'>
                                     <div
-                                        className='about__icon'
+                                        className='contacts__icon'
                                         style={{backgroundColor: link.color}}
                                     >
                                         <img src={link.image} alt={link.text}/>
                                     </div>
-                                    {link.text}
+                                    <p>{link.text}</p>
                                     <div className="contacts__button">
                                         <span>Visit page</span>
                                     </div>

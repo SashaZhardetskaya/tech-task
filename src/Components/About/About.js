@@ -1,8 +1,6 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 import {SlideDown} from 'react-slidedown';
 import 'react-slidedown/lib/slidedown.css';
-// import userImage from "../../assets/128x128.jpg";
 import ico1 from "../../Images/readme/ico1.svg";
 import ico2 from "../../Images/readme/ico2.svg";
 import ico3 from "../../Images/readme/ico3.svg";
@@ -51,7 +49,6 @@ class About extends Component {
     };
 
     //Renders
-
     renderListContent = (index) => {
         switch (index) {
             case 0:
