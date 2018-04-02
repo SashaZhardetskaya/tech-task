@@ -117,7 +117,7 @@ class About extends Component {
             case 3:
                 return (
                     <div className='about__open-card'>
-                        This project available on gh pages via <a href='https://sashazhardetskaya.github.io/tech-task/'>link</a>
+                        This project available on gh pages via <a href='https://sashazhardetskaya.github.io/about'>link</a>
                     </div>
                 );
             default:
